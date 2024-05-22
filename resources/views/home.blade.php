@@ -3,8 +3,8 @@
 @section('title', 'Home')
 
 @section('content')
-<main>
-    <h1>Home page</h1>
-</main>
+    <main style="background-image: url('{{ Vite::asset('resources/img/station.jpg') }}')">
+        <h1>Home page</h1>
+    </main>
 
 @endsection

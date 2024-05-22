@@ -1,4 +1,4 @@
-@use './partials/variables' as *;
+@use "./partials/variables" as *;
 
 $fa-font-path: "../webfonts" !default;
 
@@ -7,8 +7,112 @@ $fa-font-path: "../webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
-@import '~bootstrap/scss/bootstrap';
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Oleo+Script:wght@400;700&display=swap");
 
-h1 {
-    color: $text-color;
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+    --color-primary: rgb(185, 20, 80);
+    --color-light-primary: rgb(183, 44, 92);
+}
+
+.style-text-color {
+    color: var(--color-primary);
+}
+
+.style-background-color {
+    background-color: var(--color-primary);
+}
+
+.hype-text-shadow {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+main {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+    .main-container {
+        padding: 200px 0 50px 0;
+
+        h2 {
+            font-family: "Jersey 15", sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+
+        table {
+            font-family: "Jersey 15", sans-serif;
+            font-size: 1.2rem;
+            .cancelled td {
+                color: red;
+            }
+
+            .on-time td {
+                color: rgb(51, 158, 51) !important;
+            }
+
+            .late td {
+                color: orange;
+            }
+        }
+    }
+}
+
+/*header*/
+header {
+    .style-navbar-search-button {
+        border-color: black;
+    }
+
+    .style-navbar-search-button:hover {
+        background-color: var(--color-primary);
+        color: white !important;
+    }
+
+    nav .style-img-container {
+        width: 7%;
+    }
+
+    nav .active {
+        color: var(--color-primary) !important;
+    }
+
+    nav .nav-item:hover {
+        background-color: var(--color-primary);
+        color: white !important;
+    }
+
+    nav .nav-item .nav-link:hover {
+        color: inherit !important;
+    }
+}
+
+/************************  FOOTER *******************************/
+footer {
+    padding: 40px 0;
+    background-color: var(--color-light-primary);
+    ul {
+        li {
+            display: inline-block;
+            padding: 10px 10px 10px 0;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    text-decoration: underline;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        font-size: 2rem;
+    }
 }
