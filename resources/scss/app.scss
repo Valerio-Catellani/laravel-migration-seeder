@@ -29,6 +29,10 @@ $fa-font-path: "../webfonts" !default;
         1px 1px 0 #000;
 }
 
+.body {
+}
+
+/************MAIN *************/
 main {
     background-size: cover;
     background-attachment: fixed;
@@ -37,18 +41,24 @@ main {
     min-height: 100vh;
 
     .main-container {
-        padding: 200px 0 50px 0;
+        padding: 150px 0 50px 0;
+
+        h1 {
+            font-family: "Jersey 15", sans-serif;
+            color: var(--color-light-primary);
+        }
 
         h2 {
             font-family: "Jersey 15", sans-serif;
             font-size: 3rem;
             font-weight: bold;
-            color: var(--color-primary);
+            color: var(--color-light-primary);
         }
 
         table {
             font-family: "Jersey 15", sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
+
             .cancelled td {
                 color: red;
             }
@@ -66,6 +76,7 @@ main {
 
 /*header*/
 header {
+    font-size: 1.35rem;
     .style-navbar-search-button {
         border-color: black;
     }

@@ -4,7 +4,9 @@
 
 @section('content')
     <main style="background-image: url('{{ Vite::asset('resources/img/station.jpg') }}')">
-        <h1>Home page</h1>
+        <div class="main-container container">
+            <h1 class="hype-text-shadow text-center display-1 fw-bold ">Welcome to BoolStation!</h1>
+        </div>
     </main>
 
 @endsection
