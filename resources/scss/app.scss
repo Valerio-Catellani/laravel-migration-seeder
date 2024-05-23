@@ -48,11 +48,32 @@ main {
             color: var(--color-light-primary);
         }
 
-        h2 {
-            font-family: "Jersey 15", sans-serif;
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--color-light-primary);
+        .table-title-container {
+            background-color: rgb(36, 36, 36);
+
+            h2 {
+                font-family: "Jersey 15", sans-serif;
+                font-size: 3rem;
+                font-weight: bold;
+                text-align: center;
+                color: rgb(218, 101, 6);
+                animation: scroll 20s linear infinite;
+
+                @keyframes scroll {
+                    0% {
+                        left: -100%;
+                    }
+                    10% {
+                        left: 0;
+                    }
+                    90% {
+                        left: 0;
+                    }
+                    100% {
+                        left: 100%;
+                    }
+                }
+            }
         }
 
         table {

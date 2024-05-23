@@ -1,4 +1,4 @@
-<table class="table table-dark table-hover shadow">
+<table class="table table-dark table-hover shadow mb-5">
     <thead>
         <tr>
             <th scope="col">Codice Treno</th>
