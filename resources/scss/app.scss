@@ -29,9 +29,6 @@ $fa-font-path: "../webfonts" !default;
         1px 1px 0 #000;
 }
 
-.body {
-}
-
 /************MAIN *************/
 main {
     background-size: cover;
@@ -53,7 +50,7 @@ main {
 
             h2 {
                 font-family: "Jersey 15", sans-serif;
-                font-size: 3rem;
+                font-size: 5rem;
                 font-weight: bold;
                 text-align: center;
                 color: rgb(218, 101, 6);
@@ -95,33 +92,85 @@ main {
     }
 }
 
-/*header*/
+/**
+* Variables
+$text-primary-color:
+$background-secondary-color
+$background-primary-color: 
+$shadow-primary-color: 
+*/
+.active {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 header {
-    font-size: 1.35rem;
-    .style-navbar-search-button {
-        border-color: black;
+    height: 75px;
+    background-color: $background-primary-color;
+    box-shadow: 2px 2px 5px $shadow-primary-color;
+
+    .active-color {
+        background-color: $background-secondary-color !important;
+        //box-shadow: 2px 2px 5px black;
     }
 
-    .style-navbar-search-button:hover {
-        background-color: var(--color-primary);
-        color: white !important;
+    .window-movement {
+        transform: translate(-50%, 10px) !important;
+        transition: transform 0.5s;
+        box-shadow: 2px 2px 2px $shadow-primary-color;
     }
 
-    nav .style-img-container {
-        width: 7%;
+    .border-opened-menu {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
     }
 
-    nav .active {
-        color: var(--color-primary) !important;
-    }
+    #hype-custom-nav {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        height: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: transform 0.3s ease-out;
+        background-color: inherit;
+        color: $text-primary-color !important;
 
-    nav .nav-item:hover {
-        background-color: var(--color-primary);
-        color: white !important;
-    }
+        .img-container {
+            width: 7%;
+            min-width: 90px;
+        }
 
-    nav .nav-item .nav-link:hover {
-        color: inherit !important;
+        .user-account {
+            color: white;
+            background-color: inherit;
+
+            .icon-container {
+                width: 40px;
+                height: 57.5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: calc((75px - 40px) / 2);
+            }
+
+            .bar-input {
+                top: 100%;
+                left: 0%;
+                background-color: inherit;
+                box-shadow: 2px 2px 2px $shadow-primary-color;
+            }
+
+            .search-bar-input {
+                height: 70px;
+            }
+        }
+
+        button {
+            &:hover {
+                color: white;
+            }
+        }
     }
 }
 

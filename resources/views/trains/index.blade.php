@@ -3,7 +3,7 @@
 @section('title', 'Trains')
 
 @section('content')
-    <main style="background-image: url('{{ Vite::asset('resources/img/station.jpg') }}')" class="mt-5">
+    <main style="background-image: url('{{ Vite::asset('resources/img/station.jpg') }}')">
         <div class="main-container container">
             <div class="table-title-container overflow-hidden">
                 <h2 class="hype-text-shadow position-relative ">Tutti i Treni</h2>
